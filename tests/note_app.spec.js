@@ -57,10 +57,10 @@ describe('Note app', () => {
       test('importance can be changed', async ({ page }) => {
         await page.pause()
         const otherNoteText = await page.getByText('second note')
-        const otherdNoteElement = await otherNoteText.locator('..')
+        const otherNoteElement = await otherNoteText.locator('..')
       
-        await otherdNoteElement.getByRole('button', { name: 'make not important' }).click()
-        await expect(otherdNoteElement.getByText('make important')).toBeVisible()
+        await otherNoteElement.getByRole('button', { name: 'make not important' }).click()
+        await expect(otherNoteElement.getByText('make important')).toBeVisible()
       })
     })
   })  
